@@ -1,5 +1,4 @@
 # PLN-Simulation
-Training ground for evolving neural networks
 
 (scroll to the bottom for a screenshot and a video)
 
