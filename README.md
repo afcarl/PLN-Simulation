@@ -32,3 +32,9 @@ ID	Type	Connections (neuron id and corresponding weight)
 It can be seen that two neurons were added (ID: 15, 16).
 
 ![alt text](https://github.com/meatich/PLN-Simulation/blob/master/sshot-252.png "Bouncy!")
+
+## Compilation
+Works for me:
+* Premake 4
+* SFML 2.4
+* MinGW32 GCC 5.1.0
