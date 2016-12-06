@@ -45,4 +45,4 @@ Any OS should be fine, though I tested only on Windows.
 Run `premake4 --file="premake4.lua" gmake` or `premake4 --file="premakeEvaluator.lua" gmake` to construct makefiles which will be placed in build_windows directory. `premake4.lua` is for a demonstration with GUI, `premakeEvaluator.lua` is for making a shared library loaded by Common Lisp NEAT.
 
 ## Demo
-![alt text](https://github.com/meatich/PLN-Simulation/blob/master/sshot-252.png "Bouncy!")
+[![Video](http://img.youtube.com/vi/R9je0GhgaRg/0.jpg)](https://www.youtube.com/watch?v=R9je0GhgaRg)
