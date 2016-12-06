@@ -1,7 +1,7 @@
 # PLN-Simulation
 Training ground for evolving neural networks
 
-(scroll to the bottom for screenshot and a video)
+(scroll to the bottom for a screenshot and a video)
 
 PLN is a simulation of a ball bouncing on a function (a screenshot is attached in the bottom). The function is interpolated through five points using a Lagrange polynomial. These points can be manipulated. 
 
