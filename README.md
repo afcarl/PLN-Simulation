@@ -1,6 +1,8 @@
 # PLN-Simulation
 Training ground for evolving neural networks
 
+(scroll to the bottom for screenshot and a video)
+
 PLN is a simulation of a ball bouncing on a function (a screenshot is attached in the bottom). The function is interpolated through five points using a Lagrange polynomial. These points can be manipulated. 
 
 The ultimate goal of the simulation was to test the [Common Lisp implementation of Neuroevolution of Augmenting Topologies](https://github.com/meatich/NEAT) by evolving a network for the following task: push the ball to the right as far as possible in three seconds. 
@@ -31,10 +33,17 @@ ID	Type	Connections (neuron id and corresponding weight)
 ```
 It can be seen that two neurons were added (ID: 15, 16).
 
-![alt text](https://github.com/meatich/PLN-Simulation/blob/master/sshot-252.png "Bouncy!")
-
 ## Compilation
-Works for me:
-* Premake 4
+Things that worked for me:
+* [Premake 4.4](https://premake.github.io/download.html#v4)
 * SFML 2.4
 * MinGW32 GCC 5.1.0
+
+Compiler and SFML should be compatible. The easy way is to make it ensure this is to download the latest SFML version from [here](http://www.sfml-dev.org/) and download the compiler which it requires (they give links for downloads too!).
+
+Any OS should be fine, though I tested only on Windows.
+
+Run `premake4 --file="premake4.lua" gmake` or `premake4 --file="premakeEvaluator.lua" gmake` to construct makefiles which will be placed in build_windows directory. `premake4.lua` is for a demonstration with GUI, `premakeEvaluator.lua` is for making a shared library loaded by Common Lisp NEAT.
+
+## Demo
+![alt text](https://github.com/meatich/PLN-Simulation/blob/master/sshot-252.png "Bouncy!")
