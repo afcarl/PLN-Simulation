@@ -1,0 +1,55 @@
+Population - epoch - evolve to the next generation
+
+//Sort the Species by max fitness (Use an extra list to do this)
+
+//Flag the lowest performing species over age 20 every 30 generations 
+//NOTE: THIS IS FOR COMPETITIVE COEVOLUTION STAGNATION DETECTION
+
+    Species - adjust fitness
+    //Change the fitness of all the organisms in the species to possibly 
+    //depend slightly on the age of the species
+    //and then divide it by the size of the species so that the organisms 
+    //in the species "share" the fitness
+
+//Use Species' ages to modify the objective fitness of organisms
+//Also penalize stagnant species
+
+//Then, within each Species, mark for death 
+//those below survival_thresh*average
+
+//Go through the organisms and add up their fitnesses to compute the
+//overall average
+for(curorg=organisms.begin();curorg!=organisms.end();++curorg) {
+    total+=(*curorg)->fitness;
+
+overall_average=total/total_organisms;
+
+//Now compute expected number of offspring for each individual organism
+    (*curorg)->expected_offspring=(((*curorg)->fitness)/overall_average);
+
+//Need to make up for lost foating point precision in offspring assignment
+//If we lost precision, give an extra baby to the best Species
+
+    //Give the extra offspring to the best species
+
+    //If we still arent at total, there is a problem
+    //Note that this can happen if a stagnant Species
+    //dominates the population and then gets killed off by its age
+    //Then the whole population plummets in fitness
+    //If the average fitness is allowed to hit 0, then we no longer have 
+    //an average we can use to assign offspring.
+    //      cout<<"Population died!"<<endl;
+
+//Sort the Species by max fitness (Use an extra list to do this)
+//These need to use ORIGINAL fitness
+
+//Can check population record of fitness now
+
+//Check for stagnation: fitness has not been improving for, say,
+//drop-off age + 5
+    //In case of stagnation, set expected offspring of all but the best
+    //species to 0
+
+//Kill off all Organisms marked for death.  The remainder
+//will be allowed to reproduce.
+    

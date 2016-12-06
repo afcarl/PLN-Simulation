@@ -1,0 +1,33 @@
+Species::adjust_fitness()
+
+age_debt=(age-age_of_last_improvement+1)-NEAT::dropoff_age;
+
+//For each organism
+    //Remember the original fitness before it gets modified
+        (*curorg)->orig_fitness=(*curorg)->fitness;
+
+    //Make fitness decrease after a stagnation point dropoff_age using age_debt
+    //Added an if ((age_debt>=1)||obliterate)
+    //to keep species pristine until the dropoff point
+    //obliterate is used in competitive coevolution to mark stagnation
+    //by obliterating the worst species over a certain age
+        //Extreme penalty for a long period of stagnation (divide fitness by 100)
+
+    if (age<=10) ((*curorg)->fitness)=((*curorg)->fitness)*NEAT::age_significance; 
+
+    //Do not allow negative fitness
+
+    //Share fitness with the species
+		(*curorg)->fitness=((*curorg)->fitness)/(organisms.size());
+
+	//Sort the population and mark for death those after survival_thresh*pop_size
+
+	//Update age_of_last_improvement here (across the whole species)
+
+	//Decide how many get to reproduce based on survival_thresh*pop_size
+	//Adding 1.0 ensures that at least one will survive
+        num_parents= floor(survival_thresh* organisms.size() + 1.0);
+
+	//Mark for death those who are ranked too low to be parents
+    //based on num_parents
+
