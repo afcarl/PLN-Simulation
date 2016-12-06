@@ -5,7 +5,7 @@ PLN is a simulation of a ball bouncing on a function (a screenshot is attached i
 
 The ultimate goal of the simulation was to test the [Common Lisp implementation of Neuroevolution of Augmenting Topologies](https://github.com/meatich/NEAT) by evolving a network for the following task: push the ball to the right as far as possible in three seconds. 
 
-Note: src/NEAT mostly consists of modified [C++ implementation of NEAT by Stanley](http://nn.cs.utexas.edu/soft-view.php?SoftID=4). Obviously, all appropriate licenses and copyrights apply. This code was used to check how NEAT would perform on the problem.
+Note: _src/NEAT_ mostly consists of modified [C++ implementation of NEAT by Stanley](http://nn.cs.utexas.edu/soft-view.php?SoftID=4). Obviously, all appropriate licenses and copyrights apply. This code was used to check how NEAT would perform on the problem.
 
 The network was evolved successfuly both with the C++ and Common Lisp implementations.
 
@@ -31,3 +31,4 @@ ID	Type	Connections (neuron id and corresponding weight)
 ```
 It can be seen that two neurons were added (ID: 15, 16).
 
+![alt text](https://github.com/meatich/PLN-Simulation/blob/master/sshot-252.png "Bouncy!")
